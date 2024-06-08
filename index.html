@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>White Background with Blue Rectangle</title>
     <style>
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url('YourCustomFont.ttf') format('truetype');
+            /* Replace 'YourCustomFont.ttf' with the path to your uploaded custom font file */
+        }
+
         body {
             margin: 0;
             background-color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'MyCustomFont', Arial, sans-serif; /* Use the custom font */
         }
         .top-bar {
             width: 100%;
@@ -45,10 +51,32 @@
         .title {
             color: white;
             font-size: 24px; /* Adjust the size as needed */
-            font-family: 'Helvetica', sans-serif; /* Change the font as needed */
+            font-family: 'MyCustomFont', sans-serif; /* Use the custom font */
             margin-left: 10px;
             flex-grow: 1; /* Allow the title to take up available space */
             text-align: center; /* Center the title text */
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px; /* Adjust the margin as needed */
+        }
+        .blue-button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px; /* Adjust the size as needed */
+            border-radius: 10px; /* Adjust the border radius as needed */
+            cursor: pointer;
+        }
+        .blue-button:hover {
+            background-color: darkblue;
+        }
+        .small-text {
+            font-size: 14px; /* Adjust the size as needed */
+            color: grey; /* Change the color to grey */
+            margin-top: 10px; /* Adjust the margin as needed */
+            text-align: center; /* Center the text */
         }
         @media (max-width: 600px) {
             .top-bar {
@@ -69,6 +97,13 @@
             .title {
                 font-size: 18px;
             }
+            .blue-button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+            .small-text {
+                font-size: 12px;
+            }
         }
     </style>
 </head>
@@ -83,6 +118,16 @@
             <div></div>
             <div></div>
         </div>
+    </div>
+    <div class="small-text">
+        <p>info@havsbaren.se</p>
+        <p>Phone: 0523-911 99</p>
+        <p>Hamngatan 6C</p>
+        <p>456 31 Kungshamn</p>
+    </div>
+    <div class="button-container">
+        <button class="blue-button">Boka Bord</button>
+        <div class="small-text">Klick Här!</div>
     </div>
 </body>
 </html>
