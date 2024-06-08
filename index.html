@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Background with Blue Rectangle</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+        .top-bar {
+            width: 100%;
+            height: 60px; /* Adjust the height as needed */
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px; /* Adjust the padding as needed */
+            box-sizing: border-box;
+        }
+        .hamburger {
+            width: 30px; /* Adjust the size as needed */
+            height: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .hamburger div {
+            width: 100%;
+            height: 4px; /* Adjust the thickness as needed */
+            background-color: white;
+        }
+        .logo {
+            width: 45px; /* Adjust the size as needed */
+            height: 45px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media (max-width: 600px) {
+            .top-bar {
+                height: 50px;
+                padding: 0 10px;
+            }
+            .hamburger {
+                width: 25px;
+                height: 20px;
+            }
+            .hamburger div {
+                height: 3px;
+            }
+            .logo {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="HavsBaren.png" alt="Logo">
+        </div>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>
